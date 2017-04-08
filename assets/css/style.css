@@ -9,3 +9,12 @@ html, body {
 	background-color: #F0FFFF;
 	margin-top: 0;
 }
+
+.winBox {
+	margin-left: 2px;
+	margin-bottom: 1px;
+}
+
+.lossBox {
+	margin-top: 1px;
+}
