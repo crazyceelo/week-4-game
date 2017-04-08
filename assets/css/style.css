@@ -1,6 +1,11 @@
-html {
+html, body {
 	background-image: url("../images/background.png");
 	background-size: cover;
 	height: 100%;
 	background-repeat: no-repeat;
+}
+
+.page-header {
+	background-color: #F0FFFF;
+	margin-top: 0;
 }
