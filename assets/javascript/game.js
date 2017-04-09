@@ -21,7 +21,7 @@ $(document).ready(function(){
 	var gemHighEnd = 12;
 	var gemArr = [];
 	while (gemLowEnd <= gemHighEnd) {
-		gemArr.push(lowEnd++);
+		gemArr.push(gemLowEnd++);
 	}
 	randomGemValue = gemArr[Math.floor(Math.random()*gemArr.length)];
 	$(".allGems").html(randomGemValue);
@@ -36,8 +36,15 @@ $(document).ready(function(){
 	}
 	randomNumberChallenge = arr[Math.floor(Math.random()*arr.length)];
 	console.log(randomNumberChallenge);
-
 	$("#randomNumber").html(randomNumberChallenge);
+
+	var wins = 0;
+	var losses = 0;
+	var totalScore = 0;
+	$("#wins").html(wins);
+	$("#losses").html(losses);
+	$("#totalScore").html(totalScore);
+
 });
 
 
