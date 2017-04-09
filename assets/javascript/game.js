@@ -8,8 +8,32 @@
 	points to the player's total score.
 	--- Your game will hide this amount until the player clicks a crystal.
 	--- When they do click one, update the player's score counter.
-==============================
+==============================*/
+$(document).ready(function(){
 
+
+
+
+
+// gemImage = new Image();
+// gemImage.src = "";
+
+// gemImages = new Array();
+// gemImages [0] = gemImage.src;
+// gemImages [1] = "../images/GreenGem.jpg";
+
+// var gemDiv = $(".gemSlot")
+
+// 	for (var i = 0; i < gemImages.length; i++){
+// 		$(".gemSlot").append(gemImages[i]);
+// 		var gemDivNew = $("<div>" + "</div>");
+// 		gemDiv.append(gemDivNew);
+// 	}
+// })
+
+
+
+/*
 - The player will be shown a random number at the start of the game.
 -- use jquery to initialize this
 -- The random number shown at the start of the game should be between 19 - 120.
@@ -36,4 +60,4 @@
 -- To that end, do not refresh the page as a means to restart the game.
 
 Option 1 Game design notes
-
+*/

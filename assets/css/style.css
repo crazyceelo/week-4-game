@@ -18,3 +18,8 @@ html, body {
 .lossBox {
 	margin-top: 1px;
 }
+
+.allGems {
+	height: 80px;
+	width: 80px;
+}
