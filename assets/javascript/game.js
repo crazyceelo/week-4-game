@@ -17,6 +17,16 @@
 ==============================*/
 $(document).ready(function(){
 
+	var gemLowEnd = 1;
+	var gemHighEnd = 12;
+	var gemArr = [];
+	while (gemLowEnd <= gemHighEnd) {
+		gemArr.push(lowEnd++);
+	}
+	randomGemValue = gemArr[Math.floor(Math.random()*gemArr.length)];
+	$(".allGems").html(randomGemValue);
+	console.log(randomGemValue);
+
 
 	var lowEnd = 19;
 	var highEnd = 120;
