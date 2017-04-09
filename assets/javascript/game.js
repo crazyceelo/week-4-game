@@ -17,40 +17,73 @@
 ==============================*/
 $(document).ready(function(){
 
-	var gemLowEnd = 1;
-	var gemHighEnd = 12;
-	var gemArr = [];
-	while (gemLowEnd <= gemHighEnd) {
-		gemArr.push(gemLowEnd++);
+	function startGame(){
+		var gemLowEnd = 1;
+		var gemHighEnd = 12;
+		var gemArr = [];
+		var blueGem = 0;
+		var greenGem = 0;
+		var orangeGem = 0;
+		var pinkGem = 0;
+		while (gemLowEnd <= gemHighEnd) {
+			gemArr.push(gemLowEnd++);
+		}
+		randomGemValue1 = gemArr[Math.floor(Math.random()*gemArr.length)];
+		randomGemValue2 = gemArr[Math.floor(Math.random()*gemArr.length)];
+		randomGemValue3 = gemArr[Math.floor(Math.random()*gemArr.length)];
+		randomGemValue4 = gemArr[Math.floor(Math.random()*gemArr.length)];
+		blueGem = randomGemValue1;
+		greenGem = randomGemValue2;
+		orangeGem = randomGemValue3;
+		pinkGem = randomGemValue4;
+		$("#blueGem").attr("value", blueGem);
+		$("#greenGem").attr("value", greenGem);
+		$("#orangeGem").attr("value", orangeGem);
+		$("#pinkGem").attr("value", pinkGem);
+		console.log(blueGem);
+		console.log(greenGem);
+		console.log(orangeGem);
+		console.log(pinkGem);
+
+
+     // for (var i = 0; i < letters.length; i++){
+     //    var letterBtn = $("<button>");
+     //    letterBtn.addClass("letter-button letter letter-button-color");
+     //    letterBtn.attr("data-letter", letters[i]);
+     //    letterBtn.html(letters[i]);
+     //    $("#buttons").append(letterBtn);
+
+		var lowEnd = 19;
+		var highEnd = 120;
+		var arr = [];
+		while (lowEnd <= highEnd) {
+			arr.push(lowEnd++);
+		}
+		randomNumberChallenge = arr[Math.floor(Math.random()*arr.length)];
+		$("#randomNumber").html(randomNumberChallenge);
+
+		var wins = 0;
+		var losses = 0;
+		var totalScore = 0;
+		$("#wins").html(wins);
+		$("#losses").html(losses);
+		$("#totalScore").html(totalScore);
 	}
-	randomGemValue = gemArr[Math.floor(Math.random()*gemArr.length)];
-	$(".allGems").html(randomGemValue);
-	console.log(randomGemValue);
+	
 
+	function addTotalScore(){
+		$("#blueGem").click(function(){
 
-	var lowEnd = 19;
-	var highEnd = 120;
-	var arr = [];
-	while (lowEnd <= highEnd) {
-		arr.push(lowEnd++);
+		})
 	}
-	randomNumberChallenge = arr[Math.floor(Math.random()*arr.length)];
-	console.log(randomNumberChallenge);
-	$("#randomNumber").html(randomNumberChallenge);
 
-	var wins = 0;
-	var losses = 0;
-	var totalScore = 0;
-	$("#wins").html(wins);
-	$("#losses").html(losses);
-	$("#totalScore").html(totalScore);
 
+	startGame();
+	addTotalScore();
 });
 
 
-// $("#blueGem").on("click", function(){
 
-// })
 
 
 
