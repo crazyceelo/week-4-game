@@ -17,14 +17,23 @@
 ==============================*/
 $(document).ready(function(){
 
+// Global Variables
+var wins = 0;
+var losses = 0;
+var totalScore = 0;
+var gemLowEnd = 1;
+var gemHighEnd = 12;
+var gemArr = [];
+var blueGem = 0;
+var greenGem = 0;
+var orangeGem = 0;
+var pinkGem = 0;
+var lowEnd = 19;
+var highEnd = 120;
+var arr = [];
+
 	function startGame(){
-		var gemLowEnd = 1;
-		var gemHighEnd = 12;
-		var gemArr = [];
-		var blueGem = 0;
-		var greenGem = 0;
-		var orangeGem = 0;
-		var pinkGem = 0;
+
 		while (gemLowEnd <= gemHighEnd) {
 			gemArr.push(gemLowEnd++);
 		}
@@ -53,18 +62,14 @@ $(document).ready(function(){
      //    letterBtn.html(letters[i]);
      //    $("#buttons").append(letterBtn);
 
-		var lowEnd = 19;
-		var highEnd = 120;
-		var arr = [];
+
 		while (lowEnd <= highEnd) {
 			arr.push(lowEnd++);
 		}
 		randomNumberChallenge = arr[Math.floor(Math.random()*arr.length)];
 		$("#randomNumber").html(randomNumberChallenge);
 
-		var wins = 0;
-		var losses = 0;
-		var totalScore = 0;
+
 		$("#wins").html(wins);
 		$("#losses").html(losses);
 		$("#totalScore").html(totalScore);
@@ -72,8 +77,12 @@ $(document).ready(function(){
 	
 
 	function addTotalScore(){
-		$("#blueGem").click(function(){
-
+			$("#blueGem").on("click", function(){
+			var blueBtn = ($(this).attr("value"));
+			blueBtn = parseInt(blueBtn);
+			totalScore += blueBtn;
+			$("#totalScore").html(totalScore);
+			console.log(totalScore);
 		})
 	}
 
